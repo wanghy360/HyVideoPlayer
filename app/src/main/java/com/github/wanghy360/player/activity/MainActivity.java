@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.github.wanghy360.player.R;
-import com.github.wanghy360.player.activity.BaseActivity;
 
 public class MainActivity extends BaseActivity {
 
@@ -24,4 +23,7 @@ public class MainActivity extends BaseActivity {
         startActivity(new Intent(this,IjkPlayerActivity.class));
     }
 
+    public void startDetail(View view) {
+        startActivity(new Intent(this,PlayerDetailActivity.class));
+    }
 }

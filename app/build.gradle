@@ -26,7 +26,9 @@ dependencies {
     })
     compile "com.android.support:support-v4:${rootProject.ext.supportLibVersion}"
     compile "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
-    testCompile 'junit:junit:4.12'
     compile project(':ksylibrary')
     compile project(':ijklibrary')
+
+    compile 'com.jakewharton:butterknife:7.0.1'
+    testCompile 'junit:junit:4.12'
 }

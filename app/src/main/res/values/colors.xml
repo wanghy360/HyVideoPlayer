@@ -3,4 +3,25 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="app_base_color">@color/colorPrimary</color>
+    <color name="white">#FFFFFF</color>
+    <color name="app_border_base_color">#44dddddd</color>
+    <color name="common_blackcc">#cc000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="hot_word_line_color">#292929</color>
+    <color name="app_base_color_p">@color/colorPrimaryDark</color>
+    <color name="common_black80">#80000000</color>
+    <color name="game_room_chat_bg">#F2F2F2</color>
+    <color name="game_room_chat_edit_stroke">#E7E7E7</color>
+    <color name="app_font_t2_color">#ff65676b</color>
+    <color name="app_font_t3_color">#FF999999</color>
+    <color name="app_font_t4_color">#FF949494</color>
+    <color name="game_hot_word_bg">#1D1D1D</color>
+
+    <color name="half_room_gradient_start_color">#B3000000</color>
+    <color name="half_room_gradient_end_color">#00000000</color>
+    <color name="app_base_color_top_border">#FFEDEDED</color>
+
+    <color name="hot_word_press_color">#292929</color>
+
 </resources>

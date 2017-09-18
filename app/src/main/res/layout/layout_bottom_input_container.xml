@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.github.wanghy360.player.ui.BlockTouchRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <RelativeLayout
+        android:id="@+id/id_game_gift_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp">
+
+        <Button
+            android:id="@+id/id_send_chat"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:background="@drawable/half_send_btn_selector"
+            android:gravity="center"
+            android:text="@string/chat_send"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_16sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/id_chat_edit"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_toLeftOf="@id/id_game_gift_container"
+        android:background="@drawable/bg_edit_bg"
+        android:gravity="center_vertical"
+        android:hint="@string/chat_hint"
+        android:imeOptions="flagNoExtractUi|flagNoFullscreen|actionSend"
+        android:inputType="text"
+        android:maxLength="50"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:singleLine="true"
+        android:textColor="@color/app_font_t2_color"
+        android:textColorHint="@color/app_font_t4_color"
+        android:textSize="@dimen/text_size_14sp" />
+</com.github.wanghy360.player.ui.BlockTouchRelativeLayout>

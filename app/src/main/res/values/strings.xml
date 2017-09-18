@@ -2,4 +2,15 @@
     <string name="app_name">HyVideoPlayer</string>
     <string name="ksy_player">金山播放器</string>
     <string name="ijk_player">Bilibili播放器</string>
+    <string name="player_detail">播放详情页</string>
+    <string name="chat_send">发送</string>
+    <string name="chat_hint">说点什么吧</string>
+
+    <string name="chat_err_repeat">请不要重复发言</string>
+    <string name="chat_err_too_frequent">您的发言CD还有%d秒</string>
+
+    <string name="tab_chat">评论</string>
+    <string name="tab_detail">详情</string>
+    <string name="tab_rank">粉丝榜</string>
+    <string name="tab_recommend">推荐</string>
 </resources>

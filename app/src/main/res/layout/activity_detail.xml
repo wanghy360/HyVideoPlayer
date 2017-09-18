@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/id_root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/id_play_container"
+        android:layout_width="match_parent"
+        android:layout_height="202.5dp" />
+
+    <RelativeLayout
+        android:id="@+id/id_play_container_layout"
+        style="@style/linear_mm_v"
+        android:layout_below="@+id/id_play_container">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/id_play_viewpager"
+            style="@style/match_match">
+            <android.support.v4.view.PagerTabStrip
+                android:id="@+id/id_play_top_slidtab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top" />
+        </android.support.v4.view.ViewPager>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/id_tool_container"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/id_play_container"
+        android:layout_alignRight="@id/id_play_container"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp">
+
+        <ImageView
+            android:id="@+id/id_switch_orientation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ico_switch_land" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/id_top_land"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/half_room_tool_height"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/id_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/ico_back"
+            android:drawablePadding="3dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:paddingBottom="5dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_14sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/id_bottom_land"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/half_room_tool_height"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_play_bottom"
+        android:visibility="gone" />
+
+    <com.github.wanghy360.player.ui.MagicLayout
+        android:id="@+id/id_magic_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

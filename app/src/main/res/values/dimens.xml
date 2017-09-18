@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="half_room_tool_height">60dp</dimen>
+    <dimen name="common_line_height">0.5dp</dimen>
+    <dimen name="text_size_16sp">16sp</dimen>
+    <dimen name="text_size_14sp">14sp</dimen>
+    <dimen name="top_bar_height">45dp</dimen>
+    <dimen name="common_list_margin">10.0dp</dimen>
+    <dimen name="common_list_margin_6dp">6.0dp</dimen>
+    <dimen name="common_line_height_1px">1.0dp</dimen>
+</resources>

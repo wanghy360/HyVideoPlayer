@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.3"
+    buildToolsVersion hyBuildToolsVersion
 
     //客户端环境TAG true:测试环境 false:正式环境
     def env_client_test = "true"

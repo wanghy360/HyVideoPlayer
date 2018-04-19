@@ -23,11 +23,12 @@ import com.github.wanghy360.player.R;
 import com.github.wanghy360.player.activity.PlayerDetailActivity;
 import com.github.wanghy360.player.util.InputUtils;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.OnLongClick;
 import butterknife.OnTouch;
+import butterknife.Unbinder;
 
 
 /**
@@ -35,14 +36,14 @@ import butterknife.OnTouch;
  */
 public class MagicLayout extends BaseRelativeLayout {
     //rootView
-    @Bind(R.id.id_magic_root)
+    @BindView(R.id.id_magic_root)
     RelativeLayout rootView;
     //输入框
-    @Bind(R.id.id_send_chat)
+    @BindView(R.id.id_send_chat)
     Button sendBtn;
-    @Bind(R.id.id_chat_edit)
+    @BindView(R.id.id_chat_edit)
     EditText chatEdit;
-    @Bind(R.id.id_chat_bottom)
+    @BindView(R.id.id_chat_bottom)
     RelativeLayout bottomChatContainer;
     //工具栏开关
     private boolean showTool = true;
@@ -50,6 +51,7 @@ public class MagicLayout extends BaseRelativeLayout {
     private int toolHeight;
     private boolean isLand = false;
     private boolean isKeyboardVisible = false;
+    private Unbinder unbind;
 
     public MagicLayout(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
@@ -78,7 +80,7 @@ public class MagicLayout extends BaseRelativeLayout {
 
     @Override
     protected void initView() {
-        ButterKnife.bind(this);
+        unbind = ButterKnife.bind(this);
         initUI();
     }
 
@@ -264,7 +266,9 @@ public class MagicLayout extends BaseRelativeLayout {
     }
 
     public void unBind() {
-        ButterKnife.unbind(this);
+        if (unbind != null) {
+            unbind.unbind();
+        }
     }
 
 }

@@ -39,38 +39,39 @@ import com.github.wanghy360.player.util.keyboard.KeyboardHeightProvider;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import butterknife.Unbinder;
 
 
 /**
  * Created by Wanghy on 2017/4/24
  */
 public class PlayerDetailActivity extends BaseActivity implements KeyboardHeightObserver {
-    @Bind(R.id.id_play_container)
+    @BindView(R.id.id_play_container)
     RelativeLayout videoContainer;
-    @Bind(R.id.id_play_top_slidtab)
+    @BindView(R.id.id_play_top_slidtab)
     PagerTabStrip pagerTabStrip;
-    @Bind(R.id.id_play_viewpager)
+    @BindView(R.id.id_play_viewpager)
     ViewPager viewPager;
-    @Bind(R.id.id_play_container_layout)
+    @BindView(R.id.id_play_container_layout)
     RelativeLayout tabContainer;
     //竖屏工具栏
-    @Bind(R.id.id_tool_container)
+    @BindView(R.id.id_tool_container)
     RelativeLayout rightToolContainer;
-    @Bind(R.id.id_switch_orientation)
+    @BindView(R.id.id_switch_orientation)
     ImageView switchOrientationBtn;
-    @Bind(R.id.id_root_view)
+    @BindView(R.id.id_root_view)
     RelativeLayout rootView;
 
     //横屏顶部工具栏
-    @Bind(R.id.id_top_land)
+    @BindView(R.id.id_top_land)
     RelativeLayout topToolContainer;
-    @Bind(R.id.id_back)
+    @BindView(R.id.id_back)
     TextView backBtn;
     //横屏底部工具栏背景
-    @Bind(R.id.id_bottom_land)
+    @BindView(R.id.id_bottom_land)
     View bottomToolBg;
     //是否为横屏
     private boolean isLand = false;
@@ -89,7 +90,7 @@ public class PlayerDetailActivity extends BaseActivity implements KeyboardHeight
     //工具栏高度
     private int toolHeight;
     //Magic
-    @Bind(R.id.id_magic_view)
+    @BindView(R.id.id_magic_view)
     MagicLayout magicView;
 
     //当前Tab位置
@@ -101,12 +102,14 @@ public class PlayerDetailActivity extends BaseActivity implements KeyboardHeight
 
     private Handler handler;
 
+    private Unbinder unbinder;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         setContentView(R.layout.activity_detail);
-        ButterKnife.bind(this);
+        unbinder = ButterKnife.bind(this);
         mPlayerBean = new PlayerBean();
         mPlayerBean.setUrl("rtmp://live.hkstv.hk.lxdns.com/live/hks");
         initView();
@@ -508,7 +511,9 @@ public class PlayerDetailActivity extends BaseActivity implements KeyboardHeight
         if (ringListenerTool != null)
             ringListenerTool.unregisterReceiver(this);
         magicView.unBind();
-        ButterKnife.unbind(this);
+        if (unbinder != null) {
+            unbinder.unbind();
+        }
     }
 
     @Override
